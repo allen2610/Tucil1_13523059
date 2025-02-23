@@ -38,7 +38,7 @@ public class InputOutput {
 
             if ("DEFAULT".equals(boardType)) {
                 for (int i = 0; i < tinggi; i++) {
-                    newBoard.add("X".repeat(lebar));
+                    newBoard.add("1".repeat(lebar));
                 }
                 List<String> pieceSekarang = new ArrayList<>();
                 Character nameSekarang = null;

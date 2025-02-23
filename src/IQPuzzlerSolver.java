@@ -12,7 +12,6 @@ public class IQPuzzlerSolver {
 
     public boolean solvePuzzle() {
         long start = System.currentTimeMillis();
-        transformBoard();
         if (bruteForce(0) && penuhBoard()) {
             System.out.println("Solusi Puzzle:");
             printBoard();
@@ -45,7 +44,7 @@ public class IQPuzzlerSolver {
                     if (valid(shape, r, c)) {
                         masukinPiece(shape, r, c, piece.getName());
                         if (bruteForce(index + 1)) return true;
-                        removeBlock(shape, r, c);
+                        hapusPiece(shape, r, c);
                     }
                 }
             }
@@ -77,7 +76,7 @@ public class IQPuzzlerSolver {
         }
     }
 
-    private void removeBlock(char[][] shape, int row, int col) {
+    private void hapusPiece(char[][] shape, int row, int col) {
         for (int r = 0; r < shape.length; r++) {
             for (int c = 0; c < shape[0].length; c++) {
                 if (shape[r][c] != ' ') {
@@ -140,17 +139,5 @@ public class IQPuzzlerSolver {
             System.out.println();
         }
         System.out.println();
-    }
-
-    private void transformBoard() {
-        for (int r = 0; r < board.length; r++) {
-            for (int c = 0; c < board[0].length; c++) {
-                if (board[r][c] == 'X') {
-                    board[r][c] = '1';
-                } else {
-                    board[r][c] = '0';
-                }
-            }
-        }
     }
 }
