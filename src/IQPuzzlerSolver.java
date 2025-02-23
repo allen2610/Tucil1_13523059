@@ -100,32 +100,32 @@ public class IQPuzzlerSolver {
 
     private void printBoard() {
         String[] colors = {
-            "\u001B[37m",      // White
-            "\u001B[31m",      // Red
-            "\u001B[94m",      // Bright Blue
-            "\u001B[33m",      // Yellow
-            "\u001B[95m",      // Bright Magenta
-            "\u001B[91m",      // Bright Red
-            "\u001B[32m",      // Green
-            "\u001B[93m",      // Bright Yellow
-            "\u001B[34m",      // Blue
-            "\u001B[96m",      // Bright Cyan
-            "\u001B[92m",      // Bright Green
-            "\u001B[35m",      // Magenta
-            "\u001B[36m",      // Cyan
-            "\u001B[97m",      // Bright White
-            "\u001B[90m",      // Dark Gray
-            "\u001B[38;5;208m", // Orange
-            "\u001B[105m",     // Bright Purple (Background)
-            "\u001B[38;5;51m", // Light Blue
-            "\u001B[106m",     // Bright Green (Background)
-            "\u001B[38;5;226m", // Bright Yellow
-            "\u001B[101m",     // Bright Red (Background)
-            "\u001B[104m",     // Bright Blue (Background)
-            "\u001B[102m",     // Bright Green (Background)
-            "\u001B[103m",     // Bright Yellow (Background)
-            "\u001B[107m",     // Bright White (Background)
-            "\u001B[38;5;50m"  // Neon Green
+            "\u001B[37m",
+            "\u001B[31m",
+            "\u001B[94m",
+            "\u001B[33m",
+            "\u001B[95m",
+            "\u001B[91m",
+            "\u001B[32m",
+            "\u001B[93m",
+            "\u001B[34m",
+            "\u001B[96m",
+            "\u001B[92m",
+            "\u001B[35m",
+            "\u001B[36m",
+            "\u001B[97m",
+            "\u001B[90m",
+            "\u001B[38;5;208m",
+            "\u001B[105m",
+            "\u001B[38;5;51m",
+            "\u001B[106m",
+            "\u001B[38;5;226m",
+            "\u001B[101m",
+            "\u001B[104m",
+            "\u001B[102m",
+            "\u001B[103m",
+            "\u001B[107m",
+            "\u001B[38;5;50m"
         };
 
         for (char[] row : board) {
