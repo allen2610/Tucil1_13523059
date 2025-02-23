@@ -10,7 +10,7 @@ public class Piece {
         this.shape = changeToArray(inputShape);
     
         if (!cekTerhubung()) {
-            System.out.println("Piece " + name + " tidak dapat digunakan karena tidak terhubung!");
+            System.out.println("Piece " + name + " tidak dapat digunakan karena tidak terhubung.");
             return;
         }
 
@@ -45,6 +45,32 @@ public class Piece {
             }
         }
         return hasil;
+    }
+
+    private char[][] putar(char[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        char[][] terputar = new char[cols][rows];
+
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                terputar[c][rows - 1 - r] = matrix[r][c];
+            }
+        }
+        return terputar;
+    }
+
+    private char[][] diBalik(char[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        char[][] terbalik = new char[rows][cols];
+
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                terbalik[r][cols - 1 - c] = matrix[r][c];
+            }
+        }
+        return terbalik;
     }
 
     private boolean cekTerhubung() {
@@ -98,32 +124,6 @@ public class Piece {
         }
 
         return count == hitung;
-    }
-
-    private char[][] diBalik(char[][] matrix) {
-        int rows = matrix.length;
-        int cols = matrix[0].length;
-        char[][] terbalik = new char[rows][cols];
-
-        for (int r = 0; r < rows; r++) {
-            for (int c = 0; c < cols; c++) {
-                terbalik[r][cols - 1 - c] = matrix[r][c];
-            }
-        }
-        return terbalik;
-    }
-    
-    private char[][] putar(char[][] matrix) {
-        int rows = matrix.length;
-        int cols = matrix[0].length;
-        char[][] terputar = new char[cols][rows];
-
-        for (int r = 0; r < rows; r++) {
-            for (int c = 0; c < cols; c++) {
-                terputar[c][rows - 1 - r] = matrix[r][c];
-            }
-        }
-        return terputar;
     }
 
     public void transform() {
